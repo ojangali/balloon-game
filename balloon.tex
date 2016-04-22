@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[screen]{geometry}
+\usepackage[c]{documentation}
+\usepackage{color, graphicx, alltt, hyperref, movie15, listings}
+\lstset{language=C++}
+
+%\title{Balloon Project} 
+%\author{}
+
+\begin{document}
+%\maketitle
+%\tableofcontents
+%\clearpage
+%\section{Specification}
+%\clearpage
+%\section{Analysis}
+%\clearpage
+%\section{Design}
+
+%\begin{alltt}
+%Psuedo-code
+
+%\end{alltt}
+
+%\section{Implementation}
+%\subsection*{Main Program}
+ %   Here is the header file that contains the function declarations: \\
+\inputsourcecode{balloonheader.h} 
+%\lstinputlisting{balloon.h}
+  %  This is the file with implementations of the functions: \\
+\inputsourcecode{balloon.cpp} 
+ %   This is the file with the FLTK functions: \\
+%\lstinputlisting{balloon.fl}
+%\clearpage
+%\section{Test}
+
+\href{www.google.com}{\includegraphics[scale=0.5]{hyperpic.png}}
+%\includemovie[poster,text={loading file...}]{4in}{4in}{balloon.avi}
+\end{document}
+

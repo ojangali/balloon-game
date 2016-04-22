@@ -1,0 +1,174 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0302 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include "balloonheader.h"} {private local
+} 
+
+Function {make_window()} {open
+} {
+  Fl_Window prgwin {
+    label {Balloon Project} open
+    xywh {49 25 640 400} type Double visible
+  } {
+    Fl_Box background {
+      image {background.gif} xywh {0 0 640 400}
+      code0 {\#include <Fl/Fl_GIF_Image.H>}
+    }
+    Fl_Box {} {
+      xywh {370 232 215 28}
+    }
+    Fl_Box {} {
+      xywh {385 212 190 26}
+    }
+    Fl_Box {} {
+      xywh {430 151 110 23}
+    }
+    Fl_Box {} {
+      xywh {415 172 140 16}
+    }
+    Fl_Box {} {
+      xywh {390 197 180 21}
+    }
+    Fl_Box {} {
+      xywh {400 184 160 17}
+    }
+    Fl_Box {} {
+      xywh {445 137 90 18}
+    }
+    Fl_Box {} {
+      xywh {460 121 70 19}
+    }
+    Fl_Box {} {
+      xywh {350 244 235 23}
+    }
+    Fl_Box mountain {
+      xywh {465 111 60 18} box UP_BOX
+    }
+    Fl_Button blower1 {
+      callback {int x_speed = 5; // speed of x
+int w_top = blower1->y();
+int w_bottom = blower1->y() + blower1->h();
+int b_top = balloon->y();
+int b_bottom = balloon->y() + balloon->h();
+int bx = balloon->x();
+int by = balloon->y();
+
+if (b_top < w_bottom and b_bottom > w_top){
+bx+=x_speed;}
+
+balloon->position(bx,by);}
+      xywh {10 253 50 42} box NO_BOX
+      code0 {\#include <iostream>}
+    }
+    Fl_Button blower2 {
+      callback {int x_speed = 5; // speed of x
+int w_top = blower2->y();
+int w_bottom = blower2->y() + blower2->h();
+int b_top = balloon->y();
+int b_bottom = balloon->y() + balloon->h();
+int bx = balloon->x();
+int by = balloon->y();
+
+if (b_top < w_bottom and b_bottom > w_top){
+bx+=x_speed;}
+
+balloon->position(bx,by);}
+      xywh {10 208 50 42} box NO_BOX
+      code0 {\#include <iostream>}
+    }
+    Fl_Button blower3 {
+      callback {int x_speed = 5; // speed of x
+int w_top = blower3->y();
+int w_bottom = blower3->y() + blower3->h();
+int b_top = balloon->y();
+int b_bottom = balloon->y() + balloon->h();
+int bx = balloon->x();
+int by = balloon->y();
+
+if (b_top < w_bottom and b_bottom > w_top){
+bx+=x_speed;}
+
+balloon->position(bx,by);}
+      xywh {10 163 50 42} box NO_BOX
+      code0 {\#include <iostream>}
+    }
+    Fl_Button blower4 {
+      callback {int x_speed = 5; // speed of x
+int w_top = blower4->y();
+int w_bottom = blower4->y() + blower4->h();
+int b_top = balloon->y();
+int b_bottom = balloon->y() + balloon->h();
+int bx = balloon->x();
+int by = balloon->y();
+
+if (b_top < w_bottom and b_bottom > w_top){
+bx+=x_speed;}
+
+balloon->position(bx,by);}
+      xywh {10 118 50 42} box NO_BOX
+      code0 {\#include <iostream>}
+    }
+    Fl_Button blower5 {
+      callback {int x_speed = 5; // speed of x
+int w_top = blower5->y();
+int w_bottom = blower5->y() + blower5->h();
+int b_top = balloon->y();
+int b_bottom = balloon->y() + balloon->h();
+int bx = balloon->x();
+int by = balloon->y();
+
+if (b_top < w_bottom and b_bottom > w_top){
+bx+=x_speed;}
+
+balloon->position(bx,by);}
+      xywh {10 73 50 42} box NO_BOX
+      code0 {\#include <iostream>}
+    }
+    Fl_Box {} {
+      xywh {330 267 270 23}
+    }
+    Fl_Box {} {
+      xywh {320 282 270 23}
+    }
+    Fl_Box {} {
+      xywh {315 277 285 131}
+    }
+    Fl_Box flag1 {selected
+      xywh {470 81 30 29}
+    }
+    Fl_Box balloon {
+      xywh {75 326 40 54}
+      code0 {\#include <Fl/Fl_GIF_Image.H>}
+    }
+    Fl_Box flag2 {
+      image {finish.gif} xywh {505 81 30 29}
+    }
+    Fl_Button restart {
+      label RESTART
+      callback {lose->hide();
+lose->deactivate();
+balloon->position(75,326);
+restart->hide();
+restart->deactivate();}
+      xywh {225 178 215 52} labelsize 29 hide deactivate
+    }
+    Fl_Button next {
+      label {NEXT LEVEL}
+      callback {win->hide();
+win->deactivate();
+balloon->position(75,326);
+next->hide();
+next->deactivate();}
+      xywh {235 188 215 52} labelsize 29 hide deactivate
+    }
+    Fl_Button win {
+      label {YOU WIN!}
+      xywh {288 35 131 63} box NO_BOX labelsize 62 hide deactivate
+    }
+    Fl_Button lose {
+      label {YOU LOSE!}
+      xywh {278 25 131 63} box NO_BOX labelsize 62 hide deactivate
+    }
+  }
+} 
